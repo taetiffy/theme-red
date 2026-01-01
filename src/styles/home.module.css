@@ -1,0 +1,81 @@
+@reference "./globals.css";
+
+.page {
+  @apply min-h-screen max-w-[1500px] mx-auto text-white py-2 relative;
+}
+
+.header {
+  @apply flex items-center justify-between mb-3;
+}
+
+.headerLeft {
+  @apply flex items-center gap-3;
+}
+
+.headerTitleWrap {
+  @apply bg-transparent flex flex-row gap-2 text-white;
+}
+
+.headerTitle {
+  @apply text-xl text-(--text-color);
+}
+
+.seeAllBtn {
+  @apply bg-transparent text-gray-400 text-sm;
+}
+
+.section {
+  @apply mb-3;
+}
+
+.swiperTop {}
+
+.categories {
+  @apply mb-8;
+}
+
+.categoryList {
+  @apply flex gap-3 overflow-x-auto pb-4;
+}
+
+.categoryBtn {
+  @apply text-white py-10 flex-col px-4 rounded-xl flex items-center gap-2;
+}
+
+.categoryIcon {
+  @apply text-xl;
+}
+
+.block {
+  @apply mb-6;
+}
+
+.blockHeader {
+  @apply flex items-center justify-between mb-4;
+}
+
+.blockTitleWrap {
+  @apply flex items-center flex-row gap-3;
+}
+
+.blockTitle {
+  @apply text-lg text-(--text-color);
+}
+
+.blockSeeAll {
+  @apply text-xs p-2;
+}
+
+.blockSwiper {
+  @apply mb-8;
+}
+
+.withdrawalSwiper {
+  @apply mb-2;
+}
+
+.topGamesSwiper .swiper-wrapper {
+    transition-timing-function: linear !important;
+}
+
+.withdrawalSwiperInstance {}

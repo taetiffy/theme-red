@@ -1,0 +1,91 @@
+@reference "./globals.css";
+.navbar {
+  @apply flex w-full relative z-50 text-white justify-center items-center bg-[#0e0d0d] shadow-2xl;
+}
+
+.navbarLoggedIn {
+  @apply h-[7.5rem] md:h-20;
+}
+
+.navbarLoggedOut {
+    height: 60px
+}
+
+.navbarInner {
+  @apply w-[95%] flex justify-between items-center z-50;
+}
+
+.navbarInnerLoggedIn {
+  @apply flex-col sm:flex-row;
+}
+
+.leftGroup {
+  @apply flex items-center gap-2 xl:gap-10 relative;
+}
+
+.leftGroupLoggedIn {
+  @apply w-full sm:w-auto justify-start sm:justify-start;
+}
+
+.logo {
+  @apply object-contain;
+}
+
+.onlyLgFlex {
+  @apply hidden lg:flex;
+}
+
+.arrowBtn {
+  @apply bg-red-500/10 text-white rounded-full;
+}
+
+.arrowRotator {
+  @apply transition-transform duration-800;
+}
+
+.arrowRotated {
+  @apply rotate-180;
+}
+
+.onlyMdFlex {
+  @apply hidden md:flex;
+}
+
+.tabContent {
+  @apply text-base lg:text-xl;
+}
+
+/*.tabList {
+  @apply bg-[#191919] text-white rounded-xl;
+}*/
+
+.onlySmVisible {
+  @apply absolute top-1 left-1 flex sm:hidden;
+}
+
+.hiddenOnSmDown {
+  @apply hidden sm:flex;
+}
+
+.authRight {
+  @apply flex items-center gap-2;
+}
+
+.hamButton {
+  @apply relative w-10 h-10 rounded-lg;
+}
+.hamInactive {
+  @apply bg-black/50;
+}
+
+.popoverContent {
+  @apply bg-[var(--navbar-color)];
+}
+
+.listItem {
+  @apply w-40 md:w-60 py-4 text-white;
+}
+
+.minibarSpacer {
+  @apply w-full;
+}

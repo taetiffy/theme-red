@@ -1,0 +1,106 @@
+@reference "./globals.css";
+
+.container {
+  @apply min-h-screen w-full text-white p-4;
+}
+
+.header {
+  @apply mb-6;
+}
+
+.headerTitle {
+  @apply text-2xl mb-4;
+}
+
+.gridContainer {
+  @apply grid grid-cols-1 md:grid-cols-4 gap-3 justify-center mb-7 items-center;
+}
+
+.imageWrapper {
+  @apply mb-8;
+}
+
+.imageBox {
+  @apply w-64 h-64 relative;
+}
+
+.absoluteBox {
+  @apply -mt-24 ml-5 relative z-20;
+}
+
+.textCenterBox {
+  @apply text-center mb-6;
+}
+
+.textTitle {
+  @apply text-2xl text-yellow-500 mb-2;
+}
+
+.textSub {
+  @apply text-gray-300;
+}
+
+.openBoxBtn {
+  @apply w-full text-white px-8 py-1 text-medium rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300 mb-12;
+}
+
+.selectWrapper {
+  @apply mb-6;
+}
+
+.customSelect {
+  @apply w-full;
+}
+
+.card {
+  @apply bg-[var(--navbar-color)] min-h-[300px];
+}
+
+.cardBody {
+  @apply p-8;
+}
+
+.emptyState {
+  @apply text-center text-gray-400;
+}
+
+.emptyStateTitle {
+  @apply text-lg;
+}
+
+.emptyStateSub {
+  @apply text-sm mt-2;
+}
+
+.perspective1000 {
+  perspective: 1000px;
+}
+
+.rotateY12 {
+  transform: rotateY(-12deg) rotateX(8deg);
+}
+
+.rotateX5 {
+  transform: rotateX(5deg);
+}
+
+.skewX45 {
+  transform: skewX(-45deg);
+}
+
+.skewY45 {
+  transform: skewY(-45deg);
+}
+
+.customSelect :global([data-slot="trigger"]:hover) {
+  background-color: var(--navbar-color) !important;
+  color: white !important;
+}
+
+.customSelect :global([data-slot="trigger"]:hover [data-slot="value"]) {
+  color: white !important;
+}
+
+.customSelect :global([data-slot="trigger"]) {
+  transition: all 0.2s ease !important;
+}

@@ -1,0 +1,145 @@
+@reference "../globals.css";
+
+.RegisterModal {
+  @apply dark text-white max-w-6xl;
+}
+
+.RegisterBackdrop {
+    @apply bg-black/80 backdrop-blur-sm;
+}
+
+.RegisterBase {
+  @apply bg-transparent shadow-none;
+}
+
+.RegisterBodyRoot {
+  @apply p-0;
+}
+
+.RegisterHeaderRoot {
+  @apply p-0;
+}
+
+.RegisterCloseButton {
+  @apply text-white hover:bg-gray-700 z-50;
+}
+
+.RegisterContentRoot {
+  @apply bg-transparent shadow-none px-3;
+}
+
+.RegisterContainer {
+  @apply relative w-full bg-[var(--navbar-color)] rounded-2xl overflow-hidden;
+}
+
+.RegisterMain {
+  @apply flex ;
+}
+
+/* Left image side */
+/* .RegisterSideImage {
+  @apply flex-1 relative w-full hidden md:flex items-center justify-center overflow-hidden rounded-l-2xl;
+} */
+
+.RegisterSideImage {
+  @apply flex-1 relative w-full hidden md:flex items-center justify-center overflow-hidden rounded-l-2xl;
+}
+
+.RegisterSideImageImg {
+  @apply w-full h-full object-cover;
+}
+
+/* Right panel */
+.RegisterPanel {
+  @apply flex-1 p-8 flex flex-col justify-center;
+}
+
+.RegisterCard {
+  @apply max-w-sm mx-auto w-full;
+}
+
+/* Header */
+.RegisterHeader {
+  @apply flex flex-col gap-1 border-0 p-0 mb-8;
+}
+
+.RegisterTitle {
+  @apply text-2xl font-light text-white text-center mb-2;
+}
+
+.RegisterHelpRow {
+  @apply flex items-center justify-center font-light gap-2 text-sm text-gray-400;
+}
+
+.RegisterHelpLink {
+  @apply text-yellow-500 font-light underline hover:text-yellow-400;
+}
+
+.RegisterBody {
+  @apply p-0;
+}
+
+.RegisterForm {
+  @apply flex flex-col gap-5 w-full;
+}
+
+.RegisterLabel {
+  @apply block text-sm text-white mb-2 font-light;
+}
+
+.RegisterInput {
+  @apply w-full;
+}
+
+.RegisterInputField {
+  @apply bg-black/30 text-white;
+}
+
+.RegisterInputWrapper {
+  @apply bg-black/30 hover:bg-black/40 data-[focus=true]:bg-black/50 data-[focus=true]:border-yellow-500;
+}
+
+.RegisterPasswordToggle {
+  @apply bg-transparent text-gray-400 hover:text-white;
+}
+
+.RegisterPasswordIcon {
+  @apply w-5 h-5;
+}
+
+.RegisterCheckboxRow {
+  @apply flex items-center gap-2 mt-2;
+}
+
+.RegisterCheckbox {
+  @apply text-white;
+}
+
+.RegisterCheckboxBase {
+  @apply text-white;
+}
+
+.RegisterCheckboxWrapper {
+  @apply before:border-gray-500 after:bg-yellow-500;
+}
+
+.RegisterCheckboxLabel {
+  @apply text-white text-sm font-light;
+}
+
+.RegisterSubmitButton {
+  @apply w-full py-6 text-lg mt-6 rounded-xl transition-all text-black;
+}
+
+/* Footer */
+.RegisterFooter {
+  @apply text-center mt-4;
+}
+
+.RegisterFooterText {
+  @apply text-gray-400 text-sm font-light;
+}
+
+.RegisterRegisterLink {
+  @apply text-yellow-500 underline hover:text-yellow-400 ml-2 text-sm font-light;
+}

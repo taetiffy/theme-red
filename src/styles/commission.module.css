@@ -1,0 +1,148 @@
+@reference "./globals.css";
+
+/* Commission Page Layout */
+.commissionContainer {
+    @apply min-h-screen bg-black text-white p-4;
+}
+
+/* Header Section */
+.header {
+    @apply flex items-center justify-between mb-6;
+}
+
+.headerTitle {
+    @apply flex items-center gap-2;
+}
+
+.pageTitle {
+    @apply text-2xl font-bold;
+}
+
+.clockIcon {
+    @apply text-gray-400;
+}
+
+/* Date and Refresh Section */
+.dateRefreshSection {
+    @apply flex items-center justify-between mb-8;
+}
+
+.dateInfo {
+    @apply flex items-center gap-2 text-gray-300;
+}
+
+.refreshButton {
+    @apply bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg flex items-center gap-2 transition-colors;
+}
+
+.refreshIcon {
+    @apply w-4 h-4;
+}
+
+/* Commission Summary Cards */
+.summaryGrid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-6 mb-8;
+}
+
+.summaryCardWrapper {
+    @apply space-y-4;
+}
+
+.summaryCard {
+    @apply bg-gray-800 border border-gray-700 p-6 rounded-xl;
+}
+
+.cardContent {
+    @apply text-center;
+}
+
+.cardTitle {
+    @apply text-gray-400 text-lg mb-2;
+}
+
+.cardAmount {
+    @apply text-yellow-500 text-4xl font-bold;
+}
+
+/* No Data Section */
+.noDataSection {
+    @apply text-center py-12;
+}
+
+.noDataText {
+    @apply text-gray-400 text-lg;
+}
+
+/* Detail Button */
+.detailButton {
+    @apply fixed bottom-4 right-4;
+}
+
+.detailButtonStyle {
+    @apply bg-blue-600 hover:bg-blue-700 text-white rounded-full w-12 h-12 flex items-center justify-center transition-colors;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .commissionContainer {
+        @apply p-2;
+    }
+    
+    .header {
+        @apply flex-col gap-4 items-start mb-4;
+    }
+    
+    .pageTitle {
+        @apply text-xl;
+    }
+    
+    .dateRefreshSection {
+        @apply flex-col gap-4 items-start mb-6;
+    }
+    
+    .refreshButton {
+        @apply w-full justify-center;
+    }
+    
+    .summaryGrid {
+        @apply grid-cols-1 gap-4 mb-6;
+    }
+    
+    .summaryCard {
+        @apply p-4;
+    }
+    
+    .cardAmount {
+        @apply text-3xl;
+    }
+    
+    .detailButton {
+        @apply bottom-2 right-2;
+    }
+    
+    .detailButtonStyle {
+        @apply w-10 h-10;
+    }
+}
+
+@media (max-width: 480px) {
+    .commissionContainer {
+        @apply p-3;
+    }
+    
+    .pageTitle {
+        @apply text-lg;
+    }
+    
+    .cardTitle {
+        @apply text-base;
+    }
+    
+    .cardAmount {
+        @apply text-2xl;
+    }
+    
+    .summaryCard {
+        @apply p-3;
+    }
+}

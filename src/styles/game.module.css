@@ -1,0 +1,232 @@
+@reference "./globals.css";
+
+.categoriesContainer {
+    @apply  p-4;
+}
+
+.categoriesList {
+    @apply flex gap-2 overflow-x-auto pb-2;
+}
+
+.categoryCard {
+    @apply flex-shrink-0 cursor-pointer shadow-lg duration-200;
+}
+
+/* .categoryCardActive {
+    @apply Btn1;
+} */
+
+.categoryCardDefault {
+    @apply bg-[var(--navbar-color)] hover:bg-gray-600;
+}
+
+.categoryContent {
+    @apply p-3 min-w-[90px] flex flex-col items-center gap-1;
+}
+
+.categoryIcon {
+    @apply text-2xl;
+}
+
+.categoryName {
+    @apply text-xs text-white font-medium text-center;
+}
+
+.gameGrid {
+    @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-8 gap-4;
+}
+
+.gameCard {
+    @apply bg-transparent border-none shadow-lg hover:scale-105 h-full transition-transform duration-300 relative ;
+}
+
+.gameCardBody {
+    @apply p-0 relative h-full;
+}
+
+.gameImageContainer {
+    @apply relative rounded-lg overflow-hidden;
+}
+
+.gameImage {
+    @apply w-full h-full object-cover;
+}
+
+.favoriteButton {
+    @apply absolute top-2 right-2 bg-black/50 hover:bg-black/70 border-none min-w-8 h-8;
+}
+
+.favoriteIcon {
+    @apply w-4 h-4;
+}
+
+.favoriteIconActive {
+    @apply text-red-500 fill-current;
+}
+
+.favoriteIconDefault {
+    @apply text-white;
+}
+
+.ratingBadge {
+    @apply absolute top-2 left-2 bg-black/70 px-2 py-1 rounded text-xs text-white flex items-center gap-1;
+}
+
+.gameInfo {
+    @apply p-3;
+}
+
+.gameName {
+    @apply text-white text-sm font-medium truncate;
+}
+
+.gameTabsContainer {
+    @apply mb-6;
+}
+
+.gameTabContent {
+    @apply py-6;
+}
+
+/* Search Bar */
+.searchContainer {
+    @apply mb-6 flex justify-end;
+}
+
+.searchWrapper {
+    @apply w-64;
+}
+
+.searchInput {
+    @apply text-white;
+}
+/*
+.searchInputWrapper {
+    @apply hover:bg-gray-700;
+} */
+
+.breadcrumb {
+    @apply flex items-center gap-2 mb-4 text-sm text-gray-400;
+}
+
+.breadcrumbCurrent {
+    @apply text-white;
+}
+
+.gameLayout {
+    @apply min-h-screen text-white;
+}
+
+.gameContent {
+    @apply px-4;
+}
+
+@media (max-width: 768px) {
+    .categoriesContainer {
+        @apply p-2;
+    }
+
+    .categoryContent {
+        @apply p-2 min-w-[80px];
+    }
+
+    .categoryIcon {
+        @apply text-xl;
+    }
+
+    .categoryName {
+        @apply text-xs;
+    }
+
+    .gameGrid {
+        @apply grid-cols-2 gap-3;
+    }
+
+    .searchWrapper {
+        @apply w-full;
+    }
+
+    .gameContent {
+        @apply px-2;
+    }
+}
+
+@media (max-width: 480px) {
+    .categoriesList {
+        @apply gap-1;
+    }
+
+    .categoryContent {
+        @apply p-2 min-w-[70px];
+    }
+
+    .categoryIcon {
+        @apply text-lg;
+    }
+
+    .categoryName {
+        @apply text-xs;
+    }
+
+    .gameGrid {
+        @apply grid-cols-2 gap-2;
+    }
+
+    .gameImage {
+        @apply h-24;
+    }
+}
+.CardText{
+    transition:all 0.3s ease-in;
+    opacity: 0;
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.CardContainer:hover .CardText{
+    bottom: 8px;
+    opacity: 1;
+    color: var(--main-color);
+    z-index: 11;
+}
+
+.CardContainer:hover .CardTextTop{
+    opacity: 1;
+    color:transparent;
+    width:0;
+}
+
+.CardTextTop{
+    transition:all 0.2s ease-in;
+    opacity: 1;
+    position: absolute;
+    z-index: 11;
+    top: 0;
+    left:0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: var(--main-color);
+    background-color: rgba(0, 0, 0, 0.79);
+    border-radius: 1rem 1rem 0 0;
+}
+
+.CardContainer::before{
+    content:'';
+    position: absolute;
+    z-index:10;
+    border-radius: 1rem;
+    width: 100%;
+    height: 0%;
+    bottom:0;
+    left:0;
+    background-image: linear-gradient(to top, black , transparent);
+    transition: all 0.3s ease-out;
+}
+
+.CardContainer:hover::before{
+    height: 50%;
+}

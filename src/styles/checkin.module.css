@@ -1,0 +1,141 @@
+@reference "./globals.css";
+
+.CheckInModal {
+    @apply dark text-white max-w-4xl mx-4;
+  }
+  .CheckInBackdrop {
+    @apply bg-black/80 backdrop-blur-sm;
+  }
+  .CheckInBase {
+    @apply m-4 max-h-[90vh] overflow-y-auto;
+  }
+  .CheckInCloseButton {
+    @apply text-white hover:bg-gray-700;
+  }
+  .CheckInBodyRoot {
+  }
+  .CheckInHeaderRoot {
+  }
+  
+  .CheckInHeader {
+    @apply flex flex-col items-center gap-2 pb-4;
+  }
+  .CheckInHeaderBar {
+    @apply flex flex-col sm:flex-row items-center gap-2 sm:gap-4
+           bg-linear-to-r from-orange-500 to-red-500 p-3 sm:p-4 rounded-lg w-full;
+  }
+  .CheckInHeaderLeft {
+    @apply flex items-center gap-2;
+  }
+  .CheckInHeaderIconWrap {
+    @apply flex items-center justify-center;
+  }
+  .CheckInHeaderIcon {
+    @apply h-10 w-auto;
+  }
+  .CheckInHeaderTitle {
+    @apply text-lg sm:text-xl text-white;
+  }
+  .CheckInHeaderRight {
+    @apply flex-1 text-center sm:text-right;
+  }
+  .CheckInDate {
+    @apply text-white text-xs sm:text-sm;
+  }
+  .CheckInCountdown {
+    @apply text-yellow-300 text-xs;
+  }
+  
+  .CheckInBody {
+    @apply px-3 sm:px-6 pb-6;
+  }
+  
+  .CheckInGrid {
+    @apply grid grid-cols-5 md:grid-cols-7 gap-1 sm:gap-2 md:gap-3 mb-6;
+  }
+  .CheckInCell {
+    @apply flex flex-col py-2 items-center bg-white/5 rounded-xl;
+  }
+  .CheckInCellDay {
+    @apply text-(--text-color) text-xs sm:text-sm mb-1 sm:mb-2;
+  }
+  .CheckInIconSize {
+    @apply w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12;
+  }
+  .CheckInRewardText {
+    @apply text-(--text-color) text-xs mt-1;
+  }
+  
+  .CheckInIconBox {
+    @apply w-full h-full flex items-center justify-center relative;
+  }
+  .CheckInIconImg {
+    @apply max-w-full max-h-full object-contain;
+  }
+  .CheckInIconCircle {
+    @apply w-full h-full rounded-full flex items-center justify-center;
+  }
+  .CheckInIconCircleCan {
+    @apply bg-yellow-500;
+  }
+  .CheckInIconCircleAlt {
+    @apply bg-orange-500;
+  }
+  
+  .CheckInCTA {
+    @apply text-center mb-4;
+  }
+  .CheckInPrimaryBtn {
+    @apply text-white px-8 py-3 text-medium rounded-xl;
+  }
+  
+  .CheckInSections {
+    @apply space-y-4;
+  }
+  .CheckInSectionTitle {
+    @apply text-(--text-color) font-semibold mb-2 flex items-center gap-2;
+  }
+  .CheckInTextList {
+    @apply text-(--text-color) text-sm space-y-1;
+  }
+  
+  .CheckInStatusList {
+    @apply space-y-2 text-sm;
+  }
+  .CheckInStatusRow {
+    @apply flex items-center gap-2;
+  }
+  .CheckInDot {
+    @apply w-4 h-4 rounded-full flex items-center justify-center;
+  }
+  .CheckInDotGreen {
+    @apply bg-green-500;
+  }
+  .CheckInDotRed {
+    @apply bg-red-500;
+  }
+  .CheckInDotRedDeep {
+    @apply bg-red-600;
+  }
+  .CheckInDotOrange {
+    @apply bg-orange-500;
+  }
+  .CheckInDotMark {
+    @apply text-white text-[10px] leading-none;
+  }
+  .CheckInStatusText {
+    @apply text-(--text-color);
+  }
+  .CheckInStatusRight {
+    @apply flex items-center gap-1 ml-auto;
+  }
+  .CheckInGem {
+    @apply text-purple-400;
+  }
+  .CheckInWarn {
+    @apply text-orange-400;
+  }
+  .CheckInStatusWhite {
+    @apply text-white;
+  }
+  

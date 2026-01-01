@@ -1,0 +1,375 @@
+@reference "./globals.css";
+
+.container {
+    @apply min-h-screen text-white p-4;
+}
+
+.pageTitle {
+    @apply text-2xl font-bold text-(--text-color) mb-6 flex items-center gap-2;
+}
+
+.infoIcon {
+    @apply w-6 h-6 text-gray-400 cursor-help;
+}
+
+.headerContainer {
+    @apply flex flex-col xl:flex-row gap-6 mb-8;
+}
+
+.headerLeft {
+    @apply flex flex-col gap-10 flex-1 md:flex-row   items-center bg-[var(--navbar-color)] px-4 lg:px-10 py-5 rounded-xl space-y-6;
+}
+
+.headerRight {
+    @apply w-full xl:w-80;
+}
+
+.qrCodeContainer {
+    @apply flex justify-center lg:justify-start;
+}
+
+.qrCode {
+    @apply  h-auto rounded-lg w-full;
+}
+
+.qrCodeSvg {
+    @apply w-full h-full;
+}
+
+.shareSection {
+    @apply space-y-3 w-full;
+}
+
+.shareTitle {
+    @apply text-(--text-color) text-lg font-semibold;
+}
+
+.shareButtons {
+    @apply flex gap-3 flex-wrap;
+}
+
+.shareButtonLine {
+    @apply bg-green-500 hover:bg-green-600 text-white w-12 h-12;
+}
+
+.shareButtonFacebook {
+    @apply bg-blue-600 hover:bg-blue-700 text-white w-12 h-12;
+}
+
+.shareButtonTwitter {
+    @apply bg-black hover:bg-gray-800 text-white w-12 h-12;
+}
+
+.shareButtonEmail {
+    @apply bg-red-500 hover:bg-red-600 text-white w-12 h-12;
+}
+
+.shareButtonSms {
+    @apply bg-purple-600 hover:bg-purple-700 text-white w-12 h-12;
+}
+
+.linkSection {
+    @apply space-y-3;
+}
+
+.linkTitle {
+    @apply text-(--text-color) text-lg font-semibold;
+}
+
+.linkContainer {
+    @apply flex gap-3;
+}
+
+.linkInput {
+    @apply text-white text-sm;
+}
+
+.linkInputWrapper {
+    @apply  bg-black  flex-1;
+}
+
+.copyButton {
+    @apply px-6 whitespace-nowrap;
+}
+
+.summaryCard {
+    @apply bg-[var(--navbar-color)] ;
+}
+
+.summaryCardBody {
+    @apply p-6 space-y-4;
+}
+
+.summaryRow {
+    @apply flex justify-between items-center py-2;
+}
+
+.summaryLabel {
+    @apply text-(--text-color) text-sm;
+}
+
+.summaryValue {
+    @apply text-(--text-color) font-bold text-xl;
+}
+
+.inputRow {
+    @apply space-y-2;
+}
+
+.inputLabel {
+    @apply text-gray-400 text-sm block;
+}
+
+.amountInput {
+    @apply text-white text-center;
+}
+
+.amountInputWrapper {
+    @apply bg-black;
+}
+
+.buttonRow {
+    @apply grid grid-cols-1 gap-3;
+}
+
+.withdrawCredit {
+    @apply h-auto py-3 text-center  text-sm;
+}
+
+.withdrawBank {
+    @apply h-auto py-3 text-center text-sm;
+}
+
+.tabsContainer {
+    @apply mt-6 w-full; 
+}
+
+/* Main Tabs */
+.mainTabList {
+    @apply bg-[var(--navbar-color)] border-b border-gray-700 p-2 rounded-lg gap-2 w-full;
+}
+
+.mainTabCursor {
+    @apply bg-transparent;
+}
+
+.mainTab {
+    @apply text-gray-400 data-[selected=true]:!text-white data-[selected=true]:font-semibold px-4 py-2 md:px-6 md:py-3 rounded-full border-b-0 border-transparent data-[selected=true]:border-transparent bg-transparent data-[selected=true]:bg-black/30 hover:bg-black/20 transition-all duration-300  flex-1;
+}
+
+.mainTab[data-selected="true"] {
+    color: white !important;
+    background: rgba(0, 0, 0, 0.3) !important;
+    border-radius: 9999px !important;
+}
+
+.mainTab[data-selected="true"] span {
+    color: white !important;
+}
+
+/* Sub Tabs */
+.tabList {
+    @apply bg-transparent border-b border-gray-700 p-0 rounded-none gap-0 w-full;
+}
+
+.tabCursor {
+    @apply bg-transparent;
+}
+
+.tab {
+    @apply text-gray-400 flex !flex-row data-[selected=true]:!text-white data-[selected=true]:font-semibold px-6 py-3 rounded-none border-b-3 border-transparent data-[selected=true]:border-yellow-500 bg-transparent data-[selected=true]:bg-transparent hover:bg-transparent w-full flex-1;
+}
+
+.tab[data-selected="true"] {
+    color: white !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+}
+
+.tab[data-selected="true"] span {
+    color: white !important;
+}
+
+.tabContent {
+    @apply font-medium;
+}
+
+.tabTitle {
+    @apply flex items-center gap-2;
+}
+
+.tabContentContainer {
+    @apply mt-6;
+}
+
+.summarySection {
+    @apply space-y-6;
+}
+
+.sectionTitle {
+    @apply text-white text-xl font-bold;
+}
+
+.statsGrid {
+    @apply grid grid-cols-3 gap-4;
+}
+
+.statCard {
+    @apply bg-[var(--navbar-color)] p-4 rounded-xl ;
+}
+
+.statHeader {
+    @apply flex justify-between items-center mb-2;
+}
+
+.statLabel {
+    @apply text-gray-400 text-sm;
+}
+
+.statValue {
+    @apply text-white font-bold text-2xl;
+}
+
+.guideButton {
+    @apply  text-white text-xs px-3 py-1 rounded-lg cursor-pointer;
+}
+
+.levelGrid {
+    @apply grid grid-cols-3 gap-4;
+}
+
+.levelCard {
+    @apply bg-gray-800 p-6 rounded-lg border border-gray-700 text-center;
+}
+
+.levelTitle {
+    @apply text-gray-400 text-sm mb-2;
+}
+
+.levelValue {
+    @apply text-white font-bold text-3xl;
+}
+
+@media (max-width: 768px) {
+    .headerContainer {
+        @apply flex-col;
+    }
+    
+    .headerRight {
+        @apply w-full;
+    }
+    
+    .linkContainer {
+        @apply flex-col;
+    }
+    
+    .copyButton {
+        @apply w-full;
+    }
+    
+    .shareButtons {
+        @apply justify-center;
+    }
+    
+    .levelGrid {
+        @apply grid-cols-1;
+    }
+    
+    .statsGrid {
+        @apply grid-cols-1;
+    }
+    
+    .buttonRow {
+        @apply grid-cols-1;
+    }
+    
+    .tabsContainer {
+        @apply w-full mx-0 px-0;
+    }
+    
+    .mainTabList {
+        @apply w-full p-1 gap-1;
+    }
+    
+    .mainTab {
+        @apply px-2 py-2 text-sm w-full flex-1;
+    }
+    
+    .tabList {
+        @apply w-full p-0 gap-0;
+    }
+    
+    .tab {
+        @apply px-2 py-2 text-sm w-full flex-1;
+    }
+    
+    .tabTitle {
+        @apply flex-row gap-2 items-center justify-center;
+    }
+    
+    .tabTitle span {
+        @apply text-sm leading-none;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        @apply p-2;
+    }
+    
+    .qrCode {
+        @apply w-48 h-48;
+    }
+    
+    .shareButtons {
+        @apply grid grid-cols-5 gap-2;
+    }
+    
+    .shareButtonLine,
+    .shareButtonFacebook,
+    .shareButtonTwitter,
+    .shareButtonEmail,
+    .shareButtonSms {
+        @apply w-10 h-10;
+    }
+    
+    .pageTitle {
+        @apply text-xl;
+    }
+    
+    .summaryCardBody {
+        @apply p-4;
+    }
+    
+    .levelCard {
+        @apply p-4;
+    }
+    
+    .tabsContainer {
+        @apply w-full mx-0 px-0;
+    }
+    
+    .mainTabList {
+        @apply w-full p-1 gap-1;
+    }
+    
+    .mainTab {
+        @apply px-1 py-2 text-xs min-w-0 flex-1;
+    }
+    
+    .tabList {
+        @apply w-full p-0 gap-0;
+    }
+    
+    .tab {
+        @apply px-1 py-2 text-xs w-full flex-1;
+    }
+    
+    .tabTitle {
+        @apply flex-row gap-1 items-center justify-center;
+    }
+    
+    .tabTitle span {
+        @apply text-xs leading-none;
+    }
+}

@@ -1,0 +1,165 @@
+@reference "./globals.css";
+.bg-linear-red {
+    background: linear-gradient(180deg,#C41411, rgba(0, 0, 0, .4), 0%,#910000, rgba(0, 0, 0, .4) 100%);
+  }
+  
+  .bgGradientYellow {
+    background: linear-gradient(180deg, #312f1a, #1a1b1e00);
+  }
+  
+  .bgGradientGreen {
+    background: linear-gradient(180deg, #223030, #1a1b1e00);
+  }
+  .bgGradientOrange {
+    background: linear-gradient(180deg, #312f1a, #1a1b1e00);
+  }
+  
+  .bgGradientOrange2 {
+    background: linear-gradient(180deg, #241a10, #1a1b1e00);
+  }
+.RankPage {
+    @apply min-h-screen text-white p-4;
+  }
+  
+  .RankHeader {
+    @apply flex items-center gap-2 mb-6;
+  }
+  .RankTitle {
+    @apply text-xl ;
+  }
+  .RankInfoDot {
+    @apply w-6 h-6 bg-white rounded-full flex items-center justify-center;
+  }
+  .RankInfoI {
+    @apply text-xs text-black;
+  }
+  
+  .RankTopRow {
+    @apply flex flex-col lg:flex-row gap-6;
+  }
+  .RankTopLeft {
+    @apply lg:w-2/3;
+  }
+  .RankTopRight {
+    @apply lg:w-1/3;
+  }
+  
+  .RankSummaryCard {
+    @apply bg-[var(--navbar-color)] h-fit;
+  }
+  .RankSummaryBody {
+    @apply p-6;
+  }
+  .RankSummaryHead {
+    @apply flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4;
+  }
+  .RankSummaryHeadLeft {
+    @apply flex items-center gap-4;
+  }
+  .RankSummaryBadge {
+    @apply w-32 h-auto rounded-full flex items-center justify-center relative;
+  }
+  .RankSummaryTitle {
+    @apply text-lg text-white font-semibold;
+  }
+  .RankSummaryUser {
+    @apply text-gray-300 text-sm;
+  }
+  .RankSummaryRight {
+    @apply text-right;
+  }
+  .RankSummaryValue {
+    @apply text-yellow-400 font-bold text-lg;
+  }
+  .RankSummaryPercent {
+    @apply text-gray-400 text-sm;
+  }
+  .RankProgressWrap {
+    @apply mt-4;
+  }
+  .RankProgress {
+    @apply w-full;
+  }
+  .RankProgressIndicator {
+    @apply bg-linear-to-r from-orange-400 to-orange-600;
+  }
+  
+  .RankCurrentCard {
+    @apply h-fit;
+    background: linear-gradient(180deg, #312f1a, #1a1b1e00);
+
+  }
+  .RankCurrentBody {
+    @apply p-6 text-center;
+  }
+  .RankCurrentIconWrap {
+    @apply w-32 h-auto mx-auto mb-4 rounded-full flex items-center justify-center;
+  }
+  .RankCurrentName {
+    @apply text-xl text-white mb-2;
+  }
+  .RankCurrentRewardRow {
+    @apply flex items-center justify-center gap-1 mb-4;
+  }
+  .RankCoin {
+    @apply text-yellow-400;
+  }
+  .RankCoinText {
+    @apply text-yellow-400;
+  }
+  .RankCoinValue {
+    @apply text-white;
+  }
+  .RankCurrentDesc {
+    @apply text-sm text-white mb-2;
+  }
+  .RankCurrentProgress {
+    @apply text-yellow-400;
+  }
+  
+  .RankGridWrap {
+    @apply mt-8;
+  }
+  .RankGrid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4;
+  }
+  .RankCard {
+    @apply hover:scale-105 transition-transform duration-300;
+  }
+  .RankCardBody {
+    @apply p-4 text-center;
+  }
+  .RankIconWrap {
+    @apply w-32 h-auto mx-auto mb-3 rounded-full flex items-center justify-center;
+  }
+  .RankName {
+    @apply text-lg text-white mb-2;
+  }
+  .RankRewardRow {
+    @apply flex items-center justify-center gap-1 mb-3;
+  }
+  .RankRewardLabel {
+    @apply text-yellow-400 text-sm font-bold;
+  }
+  .RankRewardValue {
+    @apply text-white text-sm font-bold;
+  }
+  .RankDesc {
+    @apply text-xs text-gray-300 mb-2;
+  }
+  .RankReqValue {
+    @apply text-yellow-400 font-bold text-sm;
+  }
+  
+  .RankGradGreen {
+    background: linear-gradient(180deg, #223030, #1a1b1e00);
+
+  }
+  .RankGradOrange {
+    background: linear-gradient(180deg, #312f1a, #1a1b1e00);
+
+  }
+  .RankGradOrange2 {
+    background: linear-gradient(180deg, #241a10, #1a1b1e00);
+  }
+  

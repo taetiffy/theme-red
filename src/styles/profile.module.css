@@ -1,0 +1,542 @@
+@reference "./globals.css";
+
+.page {
+    @apply min-h-screen text-white p-4;
+}
+
+.pageTitleWrap {
+    @apply mb-6;
+}
+
+.pageTitle {
+    @apply text-2xl;
+}
+
+.mobileOnly {
+    @apply block md:hidden;
+}
+
+.userCardMobile {
+    @apply bg-[var(--navbar-color)] rounded-2xl overflow-hidden shadow-lg mb-6;
+}
+
+.userCardMobileBody {
+    @apply p-6;
+}
+
+.userRow {
+    @apply flex items-center gap-4 mb-6;
+}
+
+.userAvatarSm {
+    @apply w-16 h-16 bg-gray-600 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden;
+}
+
+.userAvatarSmIcon {
+    @apply w-10 h-10 text-gray-400;
+}
+
+.userNameWrap {
+    @apply flex-1 min-w-0;
+}
+
+.userName {
+    @apply text-xl font-bold text-(--text-color) truncate;
+}
+
+.userLevel {
+    @apply text-yellow-500 text-base;
+}
+
+.kpiGrid {
+    @apply grid grid-cols-2 gap-4 mb-6;
+}
+
+.kpiCell {
+    @apply text-center;
+}
+
+.kpiLabel {
+    @apply text-gray-400 text-sm mb-1;
+}
+
+.kpiValue {
+    @apply text-(--text-color) text-lg font-semibold;
+}
+
+.turnoverWrap {
+    @apply mb-4;
+}
+
+.turnoverTextWrap {
+    @apply flex justify-center items-center mb-2;
+}
+
+.turnoverText {
+    @apply text-gray-400 text-sm text-center;
+}
+
+.turnoverEm {
+    @apply text-yellow-500;
+}
+
+.turnoverMax {
+    @apply text-yellow-500;
+}
+
+.progressMobile {
+    @apply w-full h-3;
+}
+
+.progressTrack {
+    @apply bg-gray-700;
+}
+
+.progressIndicatorGrad {
+    @apply bg-linear-to-r from-yellow-400 to-yellow-600;
+}
+
+.desktopOnly {
+    @apply hidden md:flex flex-col lg:flex-row gap-6;
+}
+
+.leftCol {
+    @apply lg:w-2/3;
+}
+
+.rightCol {
+    @apply lg:w-1/3;
+}
+
+.summaryCard {
+    @apply bg-[var(--navbar-color)] p-6;
+}
+
+.summaryBody {
+    @apply p-0;
+}
+
+.summaryRow {
+    @apply flex items-start gap-6;
+}
+
+.userAvatar {
+    @apply w-20 h-20 bg-gray-600 rounded-full flex items-center justify-center flex-shrink-0;
+}
+
+.userAvatarIcon {
+    @apply w-12 h-12 text-gray-400;
+}
+
+.summaryMain {
+    @apply flex-1;
+}
+
+.summaryHeader {
+    @apply flex items-center gap-4 mb-2;
+}
+
+.summaryName {
+    @apply text-xl font-bold text-(--text-color);
+}
+
+.summaryDoc {
+    @apply flex items-center gap-1;
+}
+
+.summaryDocIcon {
+    @apply text-red-400;
+}
+
+.summaryDocText {
+    @apply text-gray-400 text-sm;
+}
+
+.summaryKpiGrid {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-4 mb-4;
+}
+
+.summaryKpiLabel {
+    @apply text-gray-400 text-sm;
+}
+
+.summaryKpiValue {
+    @apply text-(--text-color);
+}
+
+.summaryTurnoverWrap {
+    @apply mb-4;
+}
+
+.summaryTurnoverHeader {
+    @apply flex justify-between items-center mb-2;
+}
+
+.summaryTurnoverText {
+    @apply text-gray-400 text-sm;
+}
+
+.summaryTurnoverEm {
+    @apply text-[var(--main-color)];
+}
+
+.summaryTurnoverMax {
+    @apply text-[var(--main-color)];
+}
+
+.progressDesktopBase {
+    @apply w-full;
+}
+
+.progressDesktopIndicator {
+    @apply bg-[var(--main-color)];
+}
+
+.bankWrap {
+    @apply relative;
+}
+
+.bankSwiper {
+    @apply w-full;
+}
+
+.bankSwiper :global(.swiper-slide) {
+    @apply h-auto;
+}
+
+.bankPagination {
+    @apply flex items-center justify-center text-(--text-color) text-sm;
+}
+
+.bankPagination :global(.swiper-pagination-bullet) {
+    @apply bg-white/30 rounded px-2 py-1 text-xs;
+}
+
+.bankPagination :global(.swiper-pagination-bullet-active) {
+    @apply bg-[var(--main-color)] text-(--text-color);
+}
+
+.bankNavPrev,
+.bankNavNext {
+    @apply opacity-100;
+}
+
+.bankNavPrev:disabled,
+.bankNavNext:disabled {
+    @apply opacity-30;
+}
+
+.bankCard {
+    @apply bg-linear-to-br from-[#909090] to-[#3E3E3E] p-6 rounded-2xl border border-white/50;
+}
+
+.bankCardBody {
+    @apply p-0;
+}
+
+.bankHeader {
+    @apply flex items-center justify-between mb-4;
+}
+
+.bankInfo {
+    @apply flex items-center gap-2;
+}
+
+.bankLogo {
+    @apply w-8 h-8 bg-green-600 rounded-full flex items-center justify-center;
+}
+
+.bankLogoText {
+    @apply text-white text-sm font-bold;
+}
+
+.bankName {
+    @apply text-white font-semibold;
+}
+
+.bankStatusBtn {
+    @apply bg-red-600 hover:bg-red-700 text-white text-xs px-3 py-1;
+}
+
+.bankOwner {
+    @apply text-gray-300 text-sm;
+}
+
+.bankRow {
+    @apply flex items-center gap-2;
+}
+
+.bankNumber {
+    @apply text-white text-lg font-mono;
+}
+
+.copyBtn {
+    @apply bg-transparent p-1 min-w-0;
+}
+
+.copyIcon {
+    @apply w-4 h-4 text-gray-400;
+}
+
+.bankNav {
+    @apply flex justify-between items-center mt-4;
+}
+
+.bankNavBtn {
+    @apply bg-gray-700 hover:bg-gray-600 text-white p-2 rounded-full;
+}
+
+.bankNavIcon {
+    @apply w-4 h-4;
+}
+
+.historyWrap {
+    @apply mt-8;
+}
+
+.historyTitle {
+    @apply text-xl mb-6 text-(--text-color);
+}
+
+.tabs {
+    @apply w-full;
+}
+
+.customTabs :global([data-selected="true"]) {
+    color: #eab308 !important;
+}
+
+.customTabs :global([data-selected="false"]) {
+    color: #9ca3af !important;
+}
+
+.tabList {
+    @apply gap-6 w-full relative rounded-none p-0 border-b border-divider;
+}
+
+.cursor {
+    @apply w-full bg-yellow-500;
+}
+
+.tab {
+    @apply max-w-fit px-4 h-12;
+}
+
+.tabContent {
+    @apply font-medium ;
+}
+
+.tabPanel {
+    @apply w-full;
+}
+
+.panelPad {
+    @apply py-6;
+}
+
+.panelCard {
+    @apply bg-[var(--navbar-color)] min-h-[300px];
+}
+
+.empty {
+    @apply text-center text-gray-400 py-12;
+}
+
+.emptyTitle {
+    @apply text-lg;
+}
+
+/* AddBank Modal Styles */
+.addBankModal {
+    @apply dark text-(--text-color);
+}
+
+.addBankModalContent {
+}
+
+.addBankModalHeader {
+    @apply flex flex-col gap-1;
+}
+
+.addBankModalTitle {
+    @apply text-xl font-bold text-(--text-color);
+}
+
+.addBankModalBalance {
+    @apply text-sm text-gray-400;
+}
+
+.addBankModalBody {
+    @apply space-y-6 p-4 sm:p-6;
+}
+
+.addBankModalFooter {
+    @apply flex gap-3;
+}
+
+.addBankModalCancel {
+    @apply flex-1 bg-gray-600/40 hover:bg-gray-700/70 text-white;
+}
+
+.addBankModalSubmit {
+    @apply flex-1 text-white;
+}
+
+.addBankSection {
+    @apply space-y-3;
+}
+
+.addBankSectionTitle {
+    @apply text-lg font-semibold text-(--text-color);
+}
+
+.addBankSelectTrigger {
+    @apply text-white dark;
+}
+
+.addBankSelectValue {
+    @apply text-white dark;
+}
+
+.addBankSelectItem {
+    @apply flex items-center gap-3;
+}
+
+.addBankSelectIcon {
+    @apply w-8 h-8  rounded-full flex items-center justify-center;
+}
+
+.addBankSelectIconText {
+    @apply text-white text-sm font-bold;
+}
+
+.addBankSelectInfo {
+}
+
+.addBankSelectName {
+    @apply font-medium;
+}
+
+.addBankSelectDetails {
+    @apply text-sm text-gray-400;
+}
+
+.addBankSelectedCard {
+    @apply bg-white/5 border border-white/20;
+}
+
+.addBankSelectedContent {
+    @apply p-4;
+}
+
+.addBankSelectedContainer {
+    @apply flex items-center gap-3;
+}
+
+.addBankSelectedIcon {
+    @apply w-12 h-12  rounded-full flex items-center justify-center;
+}
+
+.addBankSelectedIconText {
+    @apply text-white font-bold;
+}
+
+.addBankSelectedInfo {
+    @apply flex-1;
+}
+
+.addBankSelectedName {
+    @apply font-semibold text-white;
+}
+
+.addBankSelectedDetails {
+    @apply text-sm text-gray-300;
+}
+
+/* Account Form Styles */
+.addBankFormContent {
+    @apply space-y-3;
+}
+
+.addBankInputField {
+    @apply text-white;
+}
+
+.addBankInputLabel {
+    @apply text-gray-300;
+}
+
+.addBankInputWrapper {
+    @apply border-gray-700;
+}
+
+/* AddBank Summary Styles */
+.addBankSummaryCard {
+    @apply bg-gray-800/50 border border-gray-700;
+}
+
+.addBankSummaryContent {
+    @apply space-y-3;
+}
+
+.addBankSummaryTitle {
+    @apply font-semibold text-white;
+}
+
+.addBankSummaryDetails {
+    @apply space-y-2 text-sm;
+}
+
+.addBankSummaryRow {
+    @apply flex justify-between;
+}
+
+.addBankSummaryLabel {
+    @apply text-gray-400;
+}
+
+.addBankSummaryValue {
+    @apply text-white font-medium;
+}
+
+/* Responsive Styles for AddBank */
+@media (max-width: 640px) {
+    .addBankModalBody {
+        @apply p-2 space-y-4;
+    }
+
+    .addBankSectionTitle {
+        @apply text-base;
+    }
+
+    .addBankSelectedIcon {
+        @apply w-10 h-10;
+    }
+
+    .addBankSelectedName {
+        @apply text-sm;
+    }
+
+    .addBankSelectedDetails {
+        @apply text-xs;
+    }
+}
+
+@media (max-width: 480px) {
+    .addBankModalFooter {
+        @apply flex-col gap-2;
+    }
+
+    .addBankModalCancel,
+    .addBankModalSubmit {
+        @apply flex-none w-full;
+    }
+
+    .addBankSummaryDetails {
+        @apply text-xs;
+    }
+
+    .addBankSection {
+        @apply space-y-2;
+    }
+}

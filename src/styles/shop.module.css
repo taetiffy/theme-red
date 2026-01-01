@@ -1,0 +1,86 @@
+@reference "./globals.css";
+
+.ShopPage {
+  @apply min-h-screen text-white p-4;
+}
+
+.ShopHeader {
+  @apply flex items-center justify-between mb-6;
+}
+
+.ShopTitle {
+  @apply text-2xl;
+}
+
+.ShopHistoryBtn {
+  @apply text-white shadow-md flex flex-row gap-2;
+}
+
+.ShopTabs {
+  @apply w-full;
+}
+
+.ShopTabsInner {
+  @apply w-full;
+}
+
+.ShopTabList {
+  @apply gap-6 w-full relative rounded-none p-0 border-b border-divider;
+}
+
+.ShopCursor {
+  @apply w-full bg-yellow-500;
+}
+
+.ShopTab {
+  @apply max-w-fit px-4 h-12;
+}
+
+.ShopTabContent {
+  @apply font-medium;
+}
+
+.ShopTabPane {
+  @apply w-full;
+}
+
+.ShopPanePad {
+  @apply py-6;
+}
+
+.ShopGrid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10;
+}
+
+.ShopCard {
+  box-shadow: rgba(50, 50, 70, 0.25) 0px 30px 40px -12px, var(--main-color) 0px 18px 30px -18px;
+  @apply bg-transparent hover:scale-105 transition-transform duration-300;
+}
+
+.ShopCardBody {
+  @apply py-4;
+}
+
+.ShopImageWrap {
+  @apply relative h-48 flex items-center justify-center;
+}
+
+.ShopImage {
+  @apply max-h-48 object-contain;
+}
+
+.ShopCardContent {
+  @apply px-4 text-left;
+}
+
+.ShopPrice {
+  @apply text-[var(--main-color)];
+}
+
+.ShopItemTitle {
+  @apply text-medium text-white;
+}
+
+.ShopBtn1 {
+  @apply w-full text-white mt-4 rounded-lg py-2;
+}

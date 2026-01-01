@@ -1,0 +1,50 @@
+{
+  "name": "new-auto",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "@heroui/input": "^2.4.25",
+    "@heroui/react": "^2.8.2",
+    "@heroui/tabs": "^2.2.21",
+    "@studio-freight/lenis": "^1.0.42",
+    "@types/swiper": "^6.0.0",
+    "animejs": "4.0.2",
+    "dayjs": "^1.11.14",
+    "framer-motion": "^12.23.12",
+    "hamburger-react": "^2.5.2",
+    "js-cookie": "^3.0.5",
+    "next": "15.4.8",
+    "next-runtime-env": "^3.3.0",
+    "react": "19.1.2",
+    "react-custom-roulette": "^1.4.1",
+    "react-dom": "19.1.2",
+    "react-icons": "^5.5.0",
+    "react-qrcode-logo": "^4.0.0",
+    "socket.io-client": "^4.8.1",
+    "sonner": "^2.0.7",
+    "swiper": "^11.2.10",
+    "swr": "^2.3.6",
+    "tldts": "^7.0.17",
+    "zustand": "^5.0.7"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/js-cookie": "^3.0.6",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.4.6",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

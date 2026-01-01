@@ -1,0 +1,192 @@
+@reference "./globals.css";
+
+.container {
+    @apply min-h-screen  text-white p-6;
+}
+
+.pageTitle {
+    @apply text-2xl font-bold text-(--text-color) mb-6 flex items-center gap-2;
+}
+
+
+.promotionCard {
+    @apply rounded-xl overflow-hidden max-w-2xl bg-[var(--navbar-color)] ;
+}
+
+.cardLayout {
+    @apply flex  flex-col;
+}
+
+.imageSection {
+    @apply md:w-80 w-full flex-shrink-0;
+}
+
+.promotionImage {
+    @apply w-full  md:h-full object-cover;
+}
+
+.contentSection {
+    @apply px-1 py-3 flex-1 flex flex-col justify-between;
+}
+
+.promotionTitle {
+    @apply text-2xl md:text-xl font-bold text-yellow-400 mb-2;
+}
+
+.promotionSubtitle {
+    @apply text-lg md:text-xl font-semibold text-white mb-4;
+}
+
+.gamesList {
+    @apply text-sm w-full text-white mb-2 leading-relaxed;
+}
+
+.conditionText {
+    @apply text-sm text-white mb-6;
+}
+
+.promotionButton {
+    @apply w-full text-white font-light text-lg py-4 px-8 rounded-lg transition-colors duration-300 ;
+}
+
+.promotionContent {
+    @apply bg-[var(--navbar-color)] rounded-xl p-6 mb-6 border border-gray-700;
+}
+
+.contentTitle {
+    @apply text-xl font-bold text-yellow-400 mb-4;
+}
+
+.gameCategories {
+    @apply grid grid-cols-2 md:grid-cols-4 gap-4 mb-6;
+}
+
+.gameCategory {
+    @apply bg-gray-800 rounded-lg p-3 text-center border border-gray-600 hover:border-yellow-400 transition-colors duration-300;
+}
+
+.categoryName {
+    @apply text-white font-semibold text-sm md:text-base;
+}
+
+.conditionsSection {
+    @apply mt-6;
+}
+
+.conditionsTitle {
+    @apply text-lg font-bold text-white mb-3;
+}
+
+.conditionsList {
+    @apply space-y-2;
+}
+
+.conditionItem {
+    @apply text-gray-300 text-sm md:text-base flex items-start gap-2;
+}
+
+.conditionBullet {
+    @apply w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0;
+}
+
+.promotionActions {
+    @apply bg-[var(--navbar-color)] rounded-xl p-6 border border-gray-700;
+}
+
+.actionsTitle {
+    @apply text-lg font-bold text-white mb-4;
+}
+
+.statusContainer {
+    @apply flex items-center justify-between mb-4 p-4 bg-gray-800 rounded-lg;
+}
+
+.statusLabel {
+    @apply text-gray-400 text-sm;
+}
+
+.statusValue {
+    @apply text-white font-bold;
+}
+
+.actionButton {
+    @apply w-full  text-white font-light py-3 px-6 rounded-lg transition-colors duration-300;
+}
+
+.selectContainer {
+    @apply mb-4;
+}
+
+.selectLabel {
+    @apply text-gray-400 text-sm mb-2 block;
+}
+
+@media (max-width: 768px) {
+    .container {
+        @apply p-4;
+    }
+    
+    .cardLayout {
+        @apply flex-col;
+    }
+    
+    .imageSection {
+        @apply w-full;
+    }
+    
+    .contentSection {
+        @apply p-4;
+    }
+    
+    .promotionTitle {
+        @apply text-xl;
+    }
+    
+    .promotionSubtitle {
+        @apply text-lg;
+    }
+    
+    .promotionButton {
+        @apply py-2 px-6 text-base;
+    }
+    
+    .gameCategories {
+        @apply grid-cols-2 gap-2;
+    }
+    
+    .promotionContent,
+    .promotionActions {
+        @apply p-4;
+    }
+}
+
+@media (max-width: 480px) {
+    .promotionImage {
+        @apply h-48;
+    }
+    
+    .promotionTitle {
+        @apply text-lg;
+    }
+    
+    .promotionSubtitle {
+        @apply text-base;
+    }
+    
+    .gamesList,
+    .conditionText {
+        @apply text-xs;
+    }
+    
+    .promotionButton {
+        @apply py-2 px-4 text-sm;
+    }
+    
+    .gameCategory {
+        @apply p-2;
+    }
+    
+    .categoryName {
+        @apply text-xs;
+    }
+}
