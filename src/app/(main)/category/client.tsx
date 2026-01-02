@@ -23,8 +23,8 @@ function Client() {
     <OnStartAnimate>
       <div className="dark min-h-screen bg-[#070707]/50 backdrop-blur-md xl:mt-10">
         <div className="w-full mx-auto px-3 sm:px-4 md:px-6 py-5 rounded-2xl">
-          <div className="mt-4 grid gap-3 lg:gap-4 [grid-template-columns:88px_1fr] lg:[grid-template-columns:320px_1fr]">
-            <aside className="sticky top-16 lg:top-6 self-start h-[calc(100vh-4rem)] lg:h-fit">
+          <div className="mt-4 grid gap-3 lg:gap-4 [grid-template-columns:88px_1fr] lg:[grid-template-columns:270px_1fr]">
+            <aside className="sticky top-0 lg:top-6 self-start h-[calc(100vh-4rem)] lg:h-fit">
               <div className="rounded-2xl border border-white/10 bg-black/20 p-2 lg:p-4 h-full lg:h-auto overflow-y-auto lg:overflow-visible">
                 <div className="hidden lg:flex items-center justify-between mb-3">
                   <div className="text-white font-semibold">หมวดหมู่</div>

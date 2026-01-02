@@ -9,26 +9,24 @@ import { BasicObjectEncoder } from "@/utils/crypto";
 import { useShareStore } from "@/stores/share";
 
 import { GameCategories } from "@/components/specific/game/GameCategories";
-import { ReturnBTN } from "@/components/ReturnBTN";
 import { SearchBar } from "@/components/Searchbar";
 
 import { GamesGridSkeleton } from "@/components/ui/skeleton";
 import { OnStartAnimate } from "@/components/OnStartAnimate";
 
-import { FiInfo, FiSearch } from "react-icons/fi";
-import { FaFire } from "react-icons/fa6";
-
-const Client = ({ params = "egames", game }: { params: string; game: string }) => {
+const Client = ({ params = "egames", game }: { params?: string; game: string }) => {
   const router = useRouter();
   const { state } = useShareStore();
 
   const [debouncedGameName, setDebouncedGameName] = useState<string>("");
-  const { Provider, total, loading } = useGamesProviders(params, game);
+
+  // ✅ IMPORTANT: params เป็น string (เช่น "egames") และ game ต้องเป็น string (เช่น "slot" หรือ "casino")
+  const { Provider = [], total, loading } = useGamesProviders(params, game);
 
   const filteredGames = useMemo(() => {
     if (!debouncedGameName.trim()) return Provider;
     const searchTerm = debouncedGameName.toLowerCase();
-    return Provider.filter((item) => item.name.toLowerCase().includes(searchTerm));
+    return Provider.filter((item: any) => (item?.name ?? "").toLowerCase().includes(searchTerm));
   }, [Provider, debouncedGameName]);
 
   const handlerClick = useCallback(
@@ -44,64 +42,54 @@ const Client = ({ params = "egames", game }: { params: string; game: string }) =
 
   const showGameNames = state?.gameStat?.game_name;
 
+  if (!game) {
+    return (
+      <OnStartAnimate>
+        <div className="dark min-h-screen bg-[#070707]/50 backdrop-blur-md xl:mt-10">
+          <div className="w-full mx-auto max-w-[1400px] px-3 sm:px-4 md:px-6 py-10">
+            <div className="rounded-2xl border border-white/10 bg-black/20 p-6 text-center">
+              <div className="text-white text-lg">game ยังไม่ถูกส่งเข้ามา</div>
+              <div className="text-white/60 text-sm mt-2">
+                ตรวจว่าคุณส่ง prop <span className="text-white/80">game</span> มาหรือยัง
+              </div>
+            </div>
+          </div>
+        </div>
+      </OnStartAnimate>
+    );
+  }
+
   if (loading) return <GamesGridSkeleton count={18} />;
 
   return (
     <OnStartAnimate>
       <div className="dark min-h-screen bg-[#070707]/50 backdrop-blur-md xl:mt-10">
-        <div className="w-full mx-auto px-3 sm:px-4 md:px-6 py-6">
-          <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/25">
-            <div className="absolute -inset-10 bg-linear-to-r from-white/8 via-white/3 to-transparent blur-2xl" />
-            <div className="relative p-4 sm:p-5">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#0B0B0B] border border-white/10 flex items-center justify-center">
-                    <FaFire className="text-white/80" />
-                  </div>
-
-                  <div className="leading-tight">
-                    <div className="flex items-center gap-2">
-                      <h1 className="text-xl sm:text-2xl font-semibold text-white">
-                      หมวดหมู่เกม
-                    </h1>
-                      <FiInfo className="text-white/50" />
-                    </div>
-                    <p className="text-xs sm:text-sm text-white/60 mt-1">
-                      เลือกหมวดหมู่ ค้นหาเกม และกดเข้าเล่นได้ทันที
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-4 h-px w-full bg-linear-to-r from-white/10 via-white/5 to-transparent" />
-
-              <div className="mt-4 flex items-center justify-between">
-                <div className="text-xs text-white/50">รายการเกม</div>
-                <div className="shrink-0 text-[11px] text-white/50 bg-black/30 border border-white/10 rounded-full px-2 py-1">
-                  {filteredGames.length}/{total ?? filteredGames.length}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-4 grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-4">
-            <aside className="lg:sticky lg:top-6 h-fit">
-              <div className="rounded-2xl border border-white/10 bg-black/20 p-3 sm:p-4">
-                <div className="flex items-center justify-between mb-3">
+        <div className="w-full mx-auto max-w-[1400px] px-3 sm:px-4 md:px-6 py-6">
+          <div className="mt-4 grid gap-3 lg:gap-4 [grid-template-columns:88px_1fr] lg:[grid-template-columns:270px_1fr]">
+            <aside className="sticky top-0 lg:top-6 self-start h-[calc(100vh-4rem)] lg:h-fit">
+              <div className="rounded-3xl border border-white/10 bg-black/25 backdrop-blur-xl p-2 lg:p-4 h-full lg:h-auto overflow-y-auto lg:overflow-visible">
+                <div className="hidden lg:flex items-center justify-between mb-3">
                   <div className="text-white font-semibold">หมวดหมู่</div>
                   <span className="text-[11px] text-white/50">เลือกประเภทเกม</span>
                 </div>
-                <div className="h-px w-full bg-white/10 mb-3" />
-                <GameCategories activeByType={params} />
+                <div className="hidden lg:block h-px w-full bg-white/10 mb-3" />
+
+                <div className="lg:hidden">
+                  <GameCategories activeByType={params} variant="mobileSidebar" />
+                </div>
+
+                <div className="hidden lg:block">
+                  <GameCategories activeByType={params} />
+                </div>
               </div>
             </aside>
 
             <section className="min-w-0">
-              <div className="rounded-2xl border border-white/10 bg-black/20 p-3 sm:p-4">
+              <div className="rounded-3xl border border-white/10 bg-black/25 backdrop-blur-xl p-3 sm:p-4">
                 <div className="flex items-start justify-between gap-3">
                   <div className="min-w-0">
                     <div className="text-xs text-white/50 mt-1">
-                      เลือกหมวด แล้วกดเข้าเล่นได้ทันที
+                      เลือกหมวด แล้วกดเข้าเล่น
                     </div>
                   </div>
 
@@ -125,8 +113,8 @@ const Client = ({ params = "egames", game }: { params: string; game: string }) =
                       )}
                     </div>
                   ) : (
-                    <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4">
-                      {filteredGames.map((items, index) => {
+                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4 mt-5">
+                      {filteredGames.map((items: any, index: number) => {
                         const encodedUrl = `/play/${BasicObjectEncoder.encodeBase64ForUrl({
                           productId: items.provider.product_id,
                           gameCode: items.code,
