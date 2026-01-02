@@ -17,9 +17,11 @@ type Variant = "mobileSidebar" | "mobileSwiper" | "desktop";
 export function GameCategories({
     activeByType,
     variant,
+    onChange,
 }: {
     activeByType: string;
     variant?: Variant;
+    onChange?: () => void;
 }) {
     const router = useRouter();
     const pathname = usePathname();
@@ -253,7 +255,9 @@ export function GameCategories({
                                 active={t.active}
                                 icon={t.icon}
                                 title={t.title}
-                                onPress={() => router.replace(t.href)}
+                                onPress={() => {
+                                    router.replace(t.href);
+                                }}
                                 compact
                             />
                         ))}
@@ -285,7 +289,9 @@ export function GameCategories({
                                         active={t.active}
                                         icon={t.icon}
                                         title={t.title}
-                                        onPress={() => router.replace(t.href)}
+                                        onPress={() => {
+                                            router.replace(t.href);
+                                        }}
                                     />
                                 </SwiperSlide>
                             ))}
@@ -302,7 +308,9 @@ export function GameCategories({
                                 active={t.active}
                                 icon={t.icon}
                                 title={t.title}
-                                onPress={() => router.replace(t.href)}
+                                onPress={() => {
+                                    router.replace(t.href);
+                                }}
                             />
                         ))}
                     </div>
@@ -332,7 +340,9 @@ export function GameCategories({
                                             active={t.active}
                                             icon={t.icon}
                                             title={t.title}
-                                            onPress={() => router.replace(t.href)}
+                                            onPress={() => {
+                                                router.replace(t.href);
+                                            }}
                                         />
                                     </SwiperSlide>
                                 ))}
@@ -347,7 +357,9 @@ export function GameCategories({
                                     active={t.active}
                                     icon={t.icon}
                                     title={t.title}
-                                    onPress={() => router.replace(t.href)}
+                                    onPress={() => {
+                                        router.replace(t.href);
+                                    }}
                                 />
                             ))}
                         </div>

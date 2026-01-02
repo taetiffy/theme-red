@@ -1,14 +1,14 @@
 import { Suspense } from "react";
 import React from "react";
 
-let Client = React.lazy(() => import("./client"))
+const Client = React.lazy(() => import("./client"))
 
 export default async function ({ params }: { params: Promise<{ category: string }> }) {
 
-    const { category } = await params;
+    const xparams = await params;
     return (
-        <Suspense fallback={<p>Loading...</p>}>                
-            <Client params={category}/>
+        <Suspense fallback={<p>Loading...</p>}>
+            <Client params={xparams}/>
         </Suspense>
     );
 

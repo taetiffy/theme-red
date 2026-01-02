@@ -3,27 +3,26 @@ import React from "react";
 import { Input } from "@heroui/react";
 import styles from "@/styles/profile.module.css";
 
-interface AccountFormProps {
-    accountNumber: string;
-    onAccountNumberChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+interface AccountNameProps {
+    accountName: string;
+    onAccountNameChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export function AccountForm({
-    accountNumber,
-    onAccountNumberChange
-}: AccountFormProps) {
+export function AccountName({
+    accountName,
+    onAccountNameChange
+}: AccountNameProps) {
     return (
         <div className={styles.addBankSection}>
-            <h3 className={styles.addBankSectionTitle}>ข้อมูลบัญชี</h3>
+            <h3 className={styles.addBankSectionTitle}>ชื่อ - นามสกุล</h3>
 
             <div className={styles.addBankFormContent}>
                 <Input
                     type="text"
-                    label="หมายเลขบัญชี"
-                    placeholder="ใส่หมายเลขบัญชีธนาคาร"
-                    value={accountNumber}
-                    onChange={onAccountNumberChange}
-                    // maxLength={15}
+                    label="ชื่อ - นามสกุล"
+                    placeholder="ใส่ชื่อ - นามสกุล"
+                    value={accountName}
+                    onChange={onAccountNameChange}
                     classNames={{
                         input: styles.addBankInputField,
                         label: styles.addBankInputLabel,

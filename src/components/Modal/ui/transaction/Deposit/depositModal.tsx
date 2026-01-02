@@ -54,6 +54,9 @@ export default function DepositModal({ disclosure }: { disclosure: UseCustomDisc
         const data = new FormData(e.currentTarget);
         const extractedData = Object.fromEntries(data);
 
+        console.log("data >>", extractedData);
+        // debugger;
+
         setFormData({
             money: extractedData.money.toString(),
             promotion: extractedData.promotion.toString(),

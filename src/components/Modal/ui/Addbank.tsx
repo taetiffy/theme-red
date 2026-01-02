@@ -17,6 +17,7 @@ import styles from "@/styles/profile.module.css";
 import { UseCustomDisclosureReturn } from "@/hooks/useCustomDisclosure";
 import { createBankService } from "@/services/bank";
 import { useMemberStore } from "@/stores/member";
+import { AccountName } from "@/components/specific/profile/Addbank/AccountName";
 
 
 export default function AddBankModal({ disclosure }: { disclosure: UseCustomDisclosureReturn }) {
@@ -25,6 +26,7 @@ export default function AddBankModal({ disclosure }: { disclosure: UseCustomDisc
     const [accountNumber, setAccountNumber] = useState<string>("");
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const { member } = useMemberStore();
+    const [bankName, setBankName] = useState<string>("");
 
     const selectedBank = undefined; // Will be handled by AddBankSummary component
 
@@ -41,7 +43,7 @@ export default function AddBankModal({ disclosure }: { disclosure: UseCustomDisc
 
         setIsLoading(true);
 
-        toast.promise(createBankService(member ? member.full_name : "", selectedBankCode.trim(), accountNumber.trim()), {
+        toast.promise(createBankService((!member?.full_name) ? bankName : member.full_name, selectedBankCode.trim(), accountNumber.trim()), {
             loading: "กำลังดำเนินการ...",
             success: (data) => {
                 handleReset();
@@ -69,6 +71,10 @@ export default function AddBankModal({ disclosure }: { disclosure: UseCustomDisc
         setAccountNumber(formatted);
     };
 
+    const handleAccountNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setBankName(e.target.value);
+    };
+
 
     return (
         <Modal
@@ -91,6 +97,7 @@ export default function AddBankModal({ disclosure }: { disclosure: UseCustomDisc
                 </ModalHeader>
 
                 <ModalBody className={styles.addBankModalBody}>
+
                     <BankSelector
                         selectedBankCode={selectedBankCode}
                         onBankSelect={setSelectedBankCode}
@@ -101,10 +108,19 @@ export default function AddBankModal({ disclosure }: { disclosure: UseCustomDisc
                         onAccountNumberChange={handleAccountNumberChange}
                     />
 
+                    {!member?.full_name && (
+                        <AccountName
+                            accountName={bankName}
+                            onAccountNameChange={handleAccountNameChange}
+                        />
+                    )}
+
                     <AddBankSummary
                         selectedBankCode={selectedBankCode}
                         accountNumber={accountNumber}
                     />
+
+
                 </ModalBody>
 
                 <ModalFooter className={styles.addBankModalFooter}>
