@@ -89,7 +89,7 @@ const Client = ({ params = "egames", game }: { params?: string; game: string }) 
                 <div className="flex items-start justify-between gap-3">
                   <div className="min-w-0">
                     <div className="text-xs text-white/50 mt-1">
-                      เลือกหมวด แล้วกดเข้าเล่น
+                      เลือกเกม แล้วกดเข้าเล่น
                     </div>
                   </div>
 
@@ -100,9 +100,9 @@ const Client = ({ params = "egames", game }: { params?: string; game: string }) 
 
                 <div className="mt-3 h-px w-full bg-linear-to-r from-white/10 via-white/5 to-transparent" />
 
-                <div className="mt-3">
+                {/* <div className="mt-3">
                   <SearchBar onSearch={handleSearch} placeholder="ค้นหาเกม..." />
-                </div>
+                </div> */}
 
                 <div className="mt-4">
                   {filteredGames.length === 0 ? (
