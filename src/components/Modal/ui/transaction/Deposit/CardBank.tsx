@@ -32,6 +32,8 @@ export function OneCardBank({
                 value={selected}
                 onChange={(id) => setSelected(id)}
             />
+            {/* HARD INPUT VALUE EXTRACT WITH FORM */}
+            <input type="text" name="yourBank" value={selected} />
         </div>
     );
 }
